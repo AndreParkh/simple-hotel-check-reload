@@ -1,0 +1,15 @@
+.logout__svg{
+	width: 22px;
+	height: 22px;
+	
+	fill: none;
+}
+
+.logout__svg path{
+	stroke: var(--color-green);
+	/* stroke: #41522E; */
+
+	stroke-width: 2.2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+} 

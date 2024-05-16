@@ -1,0 +1,21 @@
+.search__section{
+	width: 100%;
+}
+
+.search__form{
+	grid-column: 1;
+	flex-direction: column;
+
+	gap: 16px;
+}
+
+.search__label{
+	flex-direction: column;
+	gap: 7px;
+	font-weight: var(--font-bold);
+}
+
+.search__label:last-of-type{
+	margin: 0px 0px 16px 0px;
+}
+

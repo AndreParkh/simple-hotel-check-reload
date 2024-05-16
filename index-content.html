@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="src/index.css">
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+	<div id="root"></div>
+	<header class="header flex">
+		<h1 class="header__title">Simple Hotel Check</h1>
+		<div class="header__logout">Выйти</div>
+	</header>
+	<div class="container">
+		<div class="main-wrapper" >
+			<div class="wrapper flex">
+				<div class="search__section section">
+					<form class="search__form flex">
+						<label class="label search__label">Локация</label>
+						<input class="input search__input" type="text">
+						<label class="label search__label">Дата заселения</label>
+						<input class="input search__input" type="text">
+						<label class="label search__label">Количество дней</label>
+						<input class="input search__input" type="text">
+						<button class="button">Найти</button>
+					</form>
+				</div>
+				
+				<div class="section favorite__section">
+					<h3 class="favorite__title">
+						Избранное
+					</h3>
+					<div class="favotite__btns flex">
+						<div class="rating__btn flex sort__btn sort-active">
+							<p>Рейтинг</p>
+							<div class="sort__arrows">
+								<div class="sort__arrow arrow_up sort-active"></div>
+								<div class="sort__arrow arrow_down"></div>
+							</div>
+						</div>
+						<div class="cost__btn flex sort__btn">
+							<p>Цена</p>
+							<div class="sort__arrows">
+								<div class="sort__arrow arrow_up"></div>
+								<div class="sort__arrow arrow_down"></div>
+							</div>
+						</div>
+					</div>
+					<div class="favorite__list flex">
+						<div class="favorite__hotel hotel selector">
+							<svg class="hotel__btn"></svg>
+							<h4 class="hotel__name">Moscow Marriott Grand Hotel</h4>
+							<p class="hotel__date">28 June, 2020 - 1 день</p>
+							<div class="hotel__info">
+								<div class="hotel__stars"></div>
+								<p class="hotel__price"> <span> Price:</span> 23 924 ₽</p></div>
+						</div>
+
+						<div class="favorite__hotel hotel selector">
+							<svg class="hotel__btn"></svg>
+							<h4 class="hotel__name">Moscow Marriott Grand Hotel</h4>
+							<p class="hotel__date">28 June, 2020 - 1 день</p>
+							<div class="hotel__info">
+								<div class="hotel__stars"></div>
+								<p class="hotel__price"> <span> Price:</span> 23 924 ₽</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="section content__section">
+				<div class="content__header flex">
+					<h2 class="content__title flex">
+						Отели 
+						<div></div>
+						Москва
+					</h2>
+					<p class="content__date">07 июля 2020</p>
+				</div>
+				<div class="swiper"></div>
+				<div class="content__wrapper">
+					<p class="content__qty-favorite">Добавлено в Избранное: <span>3</span> отеля</p>
+					<div class="content__list">
+						<div class="hotel__wrapper selector">
+							<div class="content__hotel hotel">
+								<div class="hotel__icon"></div>
+								<svg class="hotel__btn"></svg>
+								<h4 class="hotel__name">Moscow Marriott Grand Hotel</h4>
+								<p class="hotel__date">28 June, 2020 - 1 день</p>
+								<div class="hotel__info">
+									<div class="hotel__stars"></div>
+									<p class="hotel__price"> <span>Price:</span> 23 924 ₽</p></div>
+							</div>
+						</div>
+						<div class="hotel__wrapper selector">
+							<div class="content__hotel hotel">
+								<div class="hotel__icon"></div>
+								<svg class="hotel__btn"></svg>
+								<h4 class="hotel__name">Moscow Marriott Grand Hotel</h4>
+								<p class="hotel__date">28 June, 2020 - 1 день</p>
+								<div class="hotel__info">
+									<div class="hotel__stars"></div>
+									<p class="hotel__price"> <span>Price:</span> 23 924 ₽</p></div>
+							</div>
+						</div>
+
+				</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+  </body>
+</html>

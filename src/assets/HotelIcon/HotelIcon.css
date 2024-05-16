@@ -1,0 +1,19 @@
+.hotel__icon {
+	justify-content: center;
+	align-items: center;
+	min-width: 64px;
+	height: 64px;
+
+	border-radius: 50%;
+	background-color:hsla(88, 28%, 25%, 0.05);
+}
+
+.hotel__icon svg {
+	width: 35px;
+	height: 35px;
+}
+
+
+.hotel__icon path {
+	fill: var(--color-green);
+} 

@@ -1,0 +1,30 @@
+			
+.hotel__fav_btn{
+	position: absolute;
+	width: 23px;
+	height: 20px;
+	
+	right: 0;
+}
+
+.hotel__fav_btn path {
+	fill: #fff;
+	stroke: hsla(0, 0%, 77%, 1);
+	stroke-linecap: round;
+	stroke-linejoin: round;
+
+	transition: all ease 0.2s;
+
+	cursor: pointer;
+}
+
+.hotel__fav_btn path:hover {
+	fill: hsla(0, 0%, 92%, 1);
+}
+
+.hotel__fav_btn-active path,
+.hotel__fav_btn-active:hover path  {
+	fill: hsla(0, 73%, 62%, 1);
+	stroke: none
+}
+

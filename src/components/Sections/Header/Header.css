@@ -1,0 +1,22 @@
+.header{
+	justify-content: space-between;
+	padding: 32px;
+	min-width: var(--width-container);
+}
+
+.header__title{
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: var(--font-bold);
+	color: var(--color-text);
+}
+
+.header__logout {
+	display: flex;
+	align-items: center;
+
+	color: var(--color-green);
+	gap: 12px;
+	
+	cursor: pointer;
+}

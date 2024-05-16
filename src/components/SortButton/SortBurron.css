@@ -1,0 +1,43 @@
+.sort__btn {
+	padding: 4px 8px;
+
+	border: 1.5px solid var(--color-text-lightest);
+	border-radius: 4px;
+	line-height: 20px; 
+	
+	gap: 4px;
+	color: var(--color-text-grey);
+
+	transition: all ease 0.2s;
+	cursor: pointer;
+}
+
+.sort__arrows{
+	/* display: flex; */
+
+	width: 18px;
+	position: relative;
+	padding: 5px 4px 4px 6px;
+	flex-direction: column;
+}
+
+.sort__arrow {
+	width: 5px;
+	height: 5px;
+	border-left: 1.5px solid;
+	border-top: 1.5px solid;
+	color: var(--color-text-grey);
+}
+
+.arrow_up{
+	transform: rotate(45deg);
+}
+
+.arrow_down{
+	transform: rotate(-135deg);
+}
+
+.sort-active{
+	border-color: var(--color-green);
+	color: var(--color-green);
+}

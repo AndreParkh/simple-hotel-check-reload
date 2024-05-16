@@ -1,0 +1,31 @@
+.favorite__section{
+	gap: 32px;
+	width: 100%;
+	height: 100%;
+
+	max-height: calc(100% - 27rem);
+}
+
+.favorite__title {
+	font-size: 1.5rem;
+	font-weight: var(--font-bold);
+}
+
+.favotite__btns {
+	display: flex;
+	gap: 8px;
+}
+
+
+.favorite__list {
+	flex-direction: column;
+	overflow: auto;
+}
+
+.favorite__hotel{
+
+}
+
+.favorite__hotel .hotel__icon {
+	display: none;
+}
