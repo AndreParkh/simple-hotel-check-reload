@@ -15,7 +15,6 @@ function App() {
 				<Route path="/" element={<Main />}/>
 			</Route>
 		</Routes>
-		{/* {isAuthenticated ? null : <Navigate to="/login" state={{ from: location }} replace/>} */}
 	</BrowserRouter>
   )
 }
