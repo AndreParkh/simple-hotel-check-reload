@@ -1,11 +1,15 @@
 
 export interface HotelProps {
-	isFavorite: Boolean,
-	name: String,
-	rating: number,
-	startDate: String,
-	qtyDays: Number,
-	price: Number
+	isFavorite: boolean,
+	hotelInfo: hotelInfo
+}
+
+export interface hotelInfo {
+	name: string,
+	stars: number,
+	checkIn: string,
+	qtyDays: number,
+	price: number
 }
 
 export interface HotelPropsType {

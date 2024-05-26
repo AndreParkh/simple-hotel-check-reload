@@ -1,7 +1,10 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 
-import { createRequest, fetchRequest } from '../../../Functions/Fetch'
-import { createCheckOutDate, formatDate } from '../../../Functions/FormatDate'
+import { formatDate } from '../../../Functions/FormatDate'
+import { AppDispatch } from '../../../Redux/store'
+import { searchParams } from './SearchSection.props'
+import { requestHotels, setSearhParams } from '../../../Redux/hotels/hotelSlice'
 
 import './SearchSection.css'
 
@@ -9,19 +12,22 @@ const SearchSection: FC = () => {
 	const [location, setLocation] = useState<string>('Москва')
 	const [checkInDate, setCheckInDate] = useState<string>(formatDate(Date.now()).YYYYMMDD)
 	const [daysQty, setDaysQty] = useState<number>(1)
-
-	const checkOutDate = createCheckOutDate(checkInDate, daysQty)
-
-	const formatedCheckInDate = formatDate(checkInDate)
-	const formatedCheckOutDate = formatDate(checkOutDate)
-
-	const request = createRequest(formatedCheckInDate.YYYYMMDD, formatedCheckOutDate.YYYYMMDD, location)
-
-	// let json: JSON
-	let hotelArr : Promise<any>
 	
-	const callFetchRequest = (request:string, event: any) => {
-		hotelArr = fetchRequest(request, event)
+	const dispatch = useDispatch<AppDispatch>()
+	useEffect(() => {onClickHandler(searchParams)}, [])
+
+	const searchParams: searchParams = {
+		location, 
+		checkInDate, 
+		daysQty
+	}
+
+	
+	const  onClickHandler = (searchParams: searchParams, event?:  React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+		if (event) event.preventDefault();
+		
+		dispatch(setSearhParams(searchParams))
+		dispatch(requestHotels(searchParams))
 	}
 
 	return (
@@ -48,15 +54,15 @@ const SearchSection: FC = () => {
 					<input 
 						className="input search__input" 
 						type="number" 
+						min={1}
+						max={99}
 						defaultValue={daysQty} 
-						onChange={(e) => setDaysQty(Number(e.target.value))} />
+						onChange={(e) => Number(e.target.value) > 0 ? setDaysQty(Number(e.target.value)): null} />
 				</label>
-				<button className="button" type='submit' onClick={(e) => callFetchRequest(request, e)}>Найти</button>
+				<button className="button" type='submit' onClick={(e) => onClickHandler(searchParams, e)}>Найти</button>
 			</form>
 		</div>
 	)
 }
-
-
 
 export default SearchSection

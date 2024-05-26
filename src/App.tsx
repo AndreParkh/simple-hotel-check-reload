@@ -1,15 +1,22 @@
-import AuthPage from './pages/AuthPage'
-import './css/AuthPage.css'
-import MainPage from './pages/MainPage'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './pages/Login'
+import Main from './pages/Main'
+import { PrivateRoute } from './components/PrivateRoute'
+
 
 
 function App() {
 
   return (
-	<>
-	  {/* <AuthPage /> */}
-	  <MainPage />
-	</>
+	<BrowserRouter>
+		<Routes>
+			<Route path="login" element={<Login />} />
+			<Route element={<PrivateRoute />}>
+				<Route path="/" element={<Main />}/>
+			</Route>
+		</Routes>
+		{/* {isAuthenticated ? null : <Navigate to="/login" state={{ from: location }} replace/>} */}
+	</BrowserRouter>
   )
 }
 

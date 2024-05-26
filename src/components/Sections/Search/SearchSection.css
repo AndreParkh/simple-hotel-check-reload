@@ -10,8 +10,7 @@
 }
 
 .search__label{
-	flex-direction: column;
-	gap: 7px;
+
 	font-weight: var(--font-bold);
 }
 

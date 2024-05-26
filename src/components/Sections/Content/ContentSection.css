@@ -8,8 +8,9 @@
 
 .content__header{
 	justify-content: space-between;
+
 	align-items: center;
-	margin: 0px 0px 8px 0px;
+	margin: 16px 0px 8px 0px;
 	
 }
 
@@ -59,7 +60,7 @@
 
 .content__wrapper {
 	flex-direction: column;
-	height: calc(100% - 56px - 149px - 2.4rem);
+	height: calc(100% - 56px - 149px - 2.4rem - 16px);
 }
 
 .content__qty-favorite{

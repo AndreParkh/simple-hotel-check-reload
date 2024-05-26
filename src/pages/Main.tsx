@@ -5,7 +5,7 @@ import SearchSection from "../components/Sections/Search/SearchSection"
 import FavoriteSection from "../components/Sections/Favorite/FavoriteSection"
 import ContentSection from "../components/Sections/Content/ContentSection"
 
-const MainPage: FC = () => {
+const Main: FC = () => {
 
 	return (
 		<>
@@ -22,4 +22,4 @@ const MainPage: FC = () => {
 
 }
 
-export default MainPage
+export default Main

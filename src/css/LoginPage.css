@@ -1,4 +1,4 @@
-.auth__bg{
+.login__bg{
 	position: absolute;
 	z-index: -1;
 	height: 100%;
@@ -7,7 +7,7 @@
 	filter: opacity(0.4) blur(10px);
 }
 
-.auth__wrapper { 
+.login__wrapper { 
 	height: 100vh;
 	width: 100%;
 
@@ -16,16 +16,16 @@
 }
 
 
-
 .template__wrapper {
 	/* width: 345px; */
 }
 
-.auth__form{
+.login__form{
 	flex-direction: column;
+	gap: 7px;
 }
 
-.auth__title {
+.login__title {
 	font-size: 1.5rem;
 	font-weight: var(--font-bold);
 	color: var(--color-text);
@@ -33,6 +33,17 @@
 	text-align: center;
 }
 
-.auth__input{
+.login__label {
+	flex-direction: column;
+
+}
+
+.login__input{
 	width: 345px;
+}
+
+.login_err{
+	min-height: 14px;
+	font-size: 12px;
+	color: hsla(0, 84%, 51%, 1);
 }

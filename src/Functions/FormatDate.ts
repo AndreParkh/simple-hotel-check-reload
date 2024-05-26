@@ -9,9 +9,7 @@ const formatDate = (dateStr: string | number |  Date) => {
 	const year = date.getFullYear()
 
 	const YYYYMMDD = `${year}-${('0' + month).slice(-2)}-${('0' + day).slice(-2)}`
-		
 	const DDMMYYYY = `${day} ${month} ${year}`
-	
 	const DDMonthYYYY = `${day} ${monthName} ${year}`
 
 	return {
@@ -26,7 +24,8 @@ const createCheckOutDate = (checkInDate: string, daysQty: number) => {
 	const checkOut = new Date()
 
 	checkOut.setDate(checkIn.getDate() + daysQty)
-	return formatDate(checkOut).YYYYMMDD
+	console.log(checkOut) 
+	return formatDate(checkOut)
 }
 
 export { formatDate, createCheckOutDate }

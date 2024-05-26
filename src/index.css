@@ -39,6 +39,8 @@ body {
 
 .label{
 	margin: 0 0 7px 0;
+	flex-direction: column;
+	gap: 7px;
 	font-weight: var(--font-light);
 	color: var(--color-text-light);
 }
